@@ -10,6 +10,8 @@ Features:
 *Monitor and control devices speed and data usage.
 *Firewall to filter,monitor,block  apps traffic.
 *No root required.
+*Download*
+[here](https://play.google.com/store/apps/details?id=kha.prog.mikrotik)
 Requirements:
 
 * Android 4.0 or later
