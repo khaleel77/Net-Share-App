@@ -23,15 +23,3 @@ Requirements:
 * A [compatible device](#compatibility)
 
 
-Support
--------
-
-For questions, feature requests and bug reports, please .
-
-
-anslating
--------
-* Translations to other languages are welcomed
-* You can translate online [here](https://crowdin.com/project/NetShare/)
-* If your language is not listed, please send a message to aadm7779(at)gmail(dot)com
-* You can see the status of all translations [here](https://crowdin.com/project/NetShare).
