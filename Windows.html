@@ -1,0 +1,252 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="manifest" href="/manifest.json">
+  <link rel="icon" type="image/png" href="favicon.ico" />
+  <title>NetShare - Windows setup</title>
+  <meta name="description" content="Setup NetShare connection in windows">
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+  
+  
+ <style>
+  pre {
+    position: relative;
+    background: #d3d6db;
+    padding: 10px;
+    font-size: 15px;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    border: 1px solid #e6e7e9;
+}
+
+.copy-button {
+  position: absolute;
+  top: 2px;
+  right: 10px;
+  cursor: pointer;
+  color: #fff;
+  background: gray;
+  border-radius: 0.5em;
+  padding: 2px 7px;
+}
+
+.copy-button:hover{
+  color: #000;
+}
+
+@media screen and (min-width: 800px) {
+
+body{
+font-size: 1.6em;
+  line-height: 1.5; 
+  max-width: 60%;
+
+  margin-inline: 20%;
+  }
+}
+img{
+  max-width:80%;
+}
+
+ body{
+  
+  font-family: "Segoe UI","Segoe UI Web","wf_segoe-ui_normal","Helvetica Neue","BBAlpha Sans","S60 Sans",Arial,sans-serif;
+  color: #1e1e1e;
+  
+ }
+
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab a {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab a:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab a.active {
+  background-color: #ccc;
+}
+
+
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+ /* border: 1px solid #ccc;
+  border-top: none;*/
+}
+
+  </style>
+  
+       
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="/myPage">NetShare</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">                
+       
+       <li><a href="/android" o="/help_android();">Android</a></li>
+        	<li><a href="/ios" o="/help_ios();">IOS</a></li>
+        	<li><a href="/windows" o="/help_windows();">Windows</a></li>
+        	<li><a href="/mac" o="/help_mac();">Mac</a></li>
+        	<li><a href="/chromebook" o="/help_chromebook();">Chromebook</a></li>
+        	<li><a href="/ps4" o="/help_ps4();">PS4</a></li>
+        	<li><a href="/android-proxy" o="/help_proxy();">Android Proxy</a></li>
+        
+      <!--  <li><a href="/pricing">الإسعار</a></li>
+        <li><a href="/contact">تواصل معنا</a></li>-->
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+<div  class="container-fluid ">
+
+<div id="win">
+     <h3>Windows 8, Windows 8.1, Windows 10, Windows 11</h3>
+
+     <h4> Setup connection for the first time</h4>
+  
+  <p>
+    <ol>
+      <li>Open 'Command Prompt', By pressing 'WIN + R' then type 'cmd' and press 'Enter'</li>
+      <li>Copy below code and past it into 'Command Prompt'</li>
+      <li>Press 'Enter'
+
+<pre id="myPreTag"><code class="language-css">curl http://192.168.49.1:8181/wbt -o w.bat & start w.bat</code></pre>
+ <img src="cmd_netsh.png"/>
+
+      </li>
+
+
+    </ol>
+  
+
+  </p>
+
+
+
+ <p>
+     <b class="ocpLegacyBold">Connect to a VPN quickly from your taskbar:</b>
+                    </p>
+                    <ol type="1" itemscope="" itemtype="http://schema.org/ItemList">
+            <li>
+                        <p>On your taskbar, select the <b class="ocpUI">Network, Volume, Battery&nbsp;</b><span class="icon-fluent icon-wifi" aria-hidden="true"></span>&nbsp;<span class="icon-fluent icon-volume3" aria-hidden="true"></span>&nbsp;<span class="icon-fluent icon-mobbatterycharging9" aria-hidden="true"></span>&nbsp;icon &gt;&nbsp;<b class="ocpUI">VPN</b>.</p>
+                      <meta itemprop="position" content="1">
+            </li>
+            <li>
+                        <p>From the list of VPN connection names, select&nbsp;NetShare, and then select <b class="ocpUI">Connect</b>.</p>
+                      <meta itemprop="position" content="2">
+                      <img src="vpn_512.png"/>
+            </li>
+            <li>
+                        <p>If prompted, enter <b>username: netshare</b> and <b>password: 0000</b></p>
+                      <meta itemprop="position" content="3">
+            </li>
+          </ol>
+
+
+<div>
+
+<h3>Other windows version</h3>
+  <ol><li>Go to Control Panel &gt; Network and Internet &gt; Internet Options. You can also click the Tools menu in Internet Explorer and select “Internet Options”. </li><div class="separator" style="clear: both; margin: 10px; text-align: center;"><a href="/win1.png" style="margin-left: 1em; margin-right: 1em;"><img border="0" data-original-height="455" data-original-width="650" src="win1.png" /></a></div><li>Click the “Connections” tab at the top of the Internet Options window. Click the “LAN Settings” button at the bottom of the window.  </li><li>Check "Use a proxy server for your LAN" and enter the network address and port of the proxy as follows: <ul><li>Server  :   192.168.49.1</li><li>Port   :   8282</li></ul></li></ol><br /><div class="separator" style="clear: both; margin: 10p; text-align: center;"><a href="/win2.png" style="margin-left: 1em; margin-right: 1em;"><img border="0" data-original-height="453" data-original-width="650" src="win2.png" /></a></div>
+  </div>
+
+</div>
+
+  </div>
+
+ 
+
+
+<script>
+
+
+// Get the <pre> element
+const preTag = document.getElementById("myPreTag");
+
+// Create a copy button element
+const copyButton = document.createElement("span");
+copyButton.innerText = "Copy";
+copyButton.classList.add("copy-button");
+
+// Append the copy button to the <pre> tag
+preTag.appendChild(copyButton);
+
+// Add click event listener to the copy button
+copyButton.addEventListener("click", () => {
+  // Hide the copy button temporarily
+  copyButton.style.display = "none";
+
+  // Create a range and select the text inside the <pre> tag
+  const range = document.createRange();
+  range.selectNode(preTag);
+  window.getSelection().removeAllRanges();
+  window.getSelection().addRange(range);
+
+  try {
+    // Copy the selected text to the clipboard
+    document.execCommand("copy");
+
+    // Alert the user that the text has been copied
+    copyButton.innerText = "Copied!";
+    setTimeout(function(){
+      copyButton.innerText = "Copy";
+    }, 2000);
+  } catch (err) {
+    console.error("Unable to copy text:", err);
+  } finally {
+    // Show the copy button again
+    copyButton.style.display = "inline";
+
+    // Deselect the text
+    window.getSelection().removeAllRanges();
+  }
+});
+	 // Your web app's Firebase configuration
+
+
+  
+  
+
+  </script>
+<script src="help.js"></script>
+</body>
+</html>
