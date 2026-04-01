@@ -1,4 +1,4 @@
-import AppKit
+=import AppKit
 import UserNotifications
 import Network
 import Foundation
@@ -7,12 +7,13 @@ import WebKit
 //@main
 class AppDelegate: NSObject, NSApplicationDelegate{
     // Retain a reference to the status item so it doesn't get garbage collected
-    var statusBarItem: NSStatusItem!
+    //var statusBarItem: NSStatusItem!
     var connected = false
     let networkMonitor = NWPathMonitor()
     let networkQueue = DispatchQueue(label: "NetworkMonitorQueue")
     
     let discoveryManager = UDPDiscoveryManager()
+    let statusBarItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
     
     func applicationDidFinishLaunching(_ notification: Notification) {
         
@@ -21,7 +22,7 @@ class AppDelegate: NSObject, NSApplicationDelegate{
     
         
         // 1. Create the system menu bar item with a variable width
-        statusBarItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
+        //statusBarItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
         
         updateMenu(isConnected: isPPPConnected())
         startMonitoringWiFi()
@@ -45,7 +46,7 @@ class AppDelegate: NSObject, NSApplicationDelegate{
         if let button = statusBarItem.button {
                 // 2. Load the system icon (SF Symbol)
                 // "wifi" is a standard system icon. You can also try "bolt.fill", "network", etc.
-                if let iconImage = NSImage(systemSymbolName: "wifi", accessibilityDescription: "Network Status") {
+                if let iconImage = NSImage(systemSymbolName: "iphone.radiowaves.left.and.right", accessibilityDescription: "Network Status") {
                     
                     // 3. CRITICAL: Make the image scale properly in the menu bar
                     iconImage.isTemplate = true
@@ -589,4 +590,5 @@ let delegate = AppDelegate()
 app.delegate = delegate
 app.setActivationPolicy(.accessory)
 app.run()
+
 
