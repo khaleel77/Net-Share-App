@@ -1,11 +1,11 @@
 #!/bin/zsh
 
-# Usage: curl -sL http://192.168.1.37:1044/files/makeapp.sh | zsh -s MyLauncher /path/to/script.swift
+# Usage: curl -sL https://raw.githubusercontent.com/khaleel77/Net-Share-App/refs/heads/master/compile_netshare.sh
 
 swift_file="${1:-custom_window.swift}"
 
 if [[ ! -f "${swift_file}" ]]; then
-        curl -s http://192.168.1.37:8081/iNetShare.swift -o iNetShare.swift && echo "Downloaded swift file" || exit 1
+        curl -s https://raw.githubusercontent.com/khaleel77/Net-Share-App/refs/heads/master/netshare.swift -o iNetShare.swift && echo "Downloaded swift file" || exit 1
 fi
 
 #remove the previous one
